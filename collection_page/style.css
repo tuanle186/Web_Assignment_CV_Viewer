@@ -1,0 +1,11 @@
+body {
+  height: 2000px; 
+  background-image: url('../Asset/44.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+table {
+  opacity: 0.75;
+}
