@@ -1,0 +1,47 @@
+body, html {
+    height: 100%;
+    /* width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+#logo {
+    width: 80px;
+}
+
+#login_title {
+    color:#013773;
+    font-weight: 700;
+}
+
+#login_button{
+    color: white;
+    font-weight: 600;
+    max-width: 40%;
+    background-color: #013773;
+}
+
+#new_here {
+    color: white;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-image {
+    background: url(../Asset/44.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+#signup_button{
+    color: black;
+    font-weight: 600;
+    max-width: 40%;
+    background-color: white;
+}
