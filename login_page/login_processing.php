@@ -3,7 +3,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = ""; // no password
-$dbname = "cv_viewer_tmp";
+$dbname = "cv_information";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,17 +16,17 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_input = test_input($_POST['email']);
     $password_input = test_input($_POST['pswd']);
-    $sql = 'SELECT * FROM user_accounts WHERE email="' . $email_input . '"';
+    $sql = 'SELECT * FROM users WHERE email="' . $email_input . '"';
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $rows = $result->fetch_assoc();
-        if (password_verify($password_input, $rows['password'])) {
-            setcookie("user", $email_input, time() + (86400 * 30), "/");
-            $_SESSION["email"] = $email_input;
+        $_SESSION["email"] = $email_input;
+        if ($password_input == $rows['password']) {
+        // if (password_verify($password_input, $rows['password'])) {
+            setcookie("email", $email_input, time() + (86400 * 30), "/");
             header("Location: ../collection_page/collection.php");
 
         } else {
-            $_SESSION["email"] = $email_input;
             header("Location: http://localhost/login_page/login.php?wrong_pwd=1");
         }
     } else {

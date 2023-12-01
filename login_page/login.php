@@ -49,7 +49,7 @@ session_start();
                             }
                             ?>
                         </div>    
-                        <button id="login_button" type="submit" class="btn w-50 rounded-5 mb-5">Login</button>
+                        <button id="login_button" type="submit" class="btn w-50 rounded-5 mb-5">Sign in</button>
                     </form>
                 </div>
                 <div class="col-md-3"></div>
