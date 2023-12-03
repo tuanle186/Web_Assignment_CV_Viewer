@@ -37,7 +37,7 @@ if (!$_SESSION['is_signed_in']) {
                 <thead>
                     <tr>
                         <th scope="col">
-                            <p class="text-primary mb-2">CV Title</p>
+                            <p class="text-primary mb-2 px-4">CV Title</p>
                         </th>
                         <th scope="col">
                             <p class="text-primary mb-2">Last Modified</p>
@@ -53,10 +53,9 @@ if (!$_SESSION['is_signed_in']) {
                     while ($row = mysqli_fetch_assoc($resumes)) :
                     ?>
                     <tr>
-                        <td> <a href="http://localhost/cv_viewer_page/cv_viewer.php?cv_id=<?php echo $row['id']; ?>"> <?php echo $row['title']; ?> </td>
+                        <td> <a class="title px-4" href="http://localhost/cv_viewer_page/cv_viewer.php?cv_id=<?php echo $row['id']; ?>"> <?php echo $row['title']; ?> </td>
                         <td> <?php echo $row['update_at']; ?> </td>
                     </tr> 
-                    
                     <?php endwhile; ?>
                 </tbody>
             </table>

@@ -1,5 +1,5 @@
 <?php 
-    include 'db.php';
+    include 'loadData.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,23 +18,18 @@
             <!-- display img -->
             <?php                 
                 // Get image data from database 
-                $result = $conn->query("SELECT image FROM avatar ORDER BY id DESC"); 
+                $result = $conn->query("SELECT image_path FROM avatar WHERE resume_id = $resume_id"); 
             ?>
 
             <!-- Display images with BLOB data from database -->
             <?php if($result->num_rows > 0){ ?> 
                 <div class="gallery"> 
-                    <?php while($row = $result->fetch_assoc()){ ?> 
-                        <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
+                    <?php while($row = $result->fetch_assoc()){ ;?> 
+                        <img src="<?php echo $row['image_path'] ?>" > 
                     <?php } ?> 
                 </div> 
             <?php }else{ ?> 
-                <!-- <p class="status error">Image(s) not found...</p>  -->
-                <form class="open" action="upload.php" method="post" enctype="multipart/form-data">
-                    <label>Select Image File:</label>
-                    <input type="file" name="image">
-                    <input type="submit" name="submit" value="Upload" class="submitBtn">
-                </form>
+                <p class="status error">Image(s) not found...</p> 
             <?php } 
             ?>
         </div>
@@ -78,7 +73,6 @@
         </div>
 
         <div class="exp">
-
             <h2>EXPERIENCES</h2>
             <?php 
                 $experiences = getExperiences($resume_id, $conn);

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top mb-4">
     <div class="container">
-        <a href="collection.php"> <img class="navbar-brand" src="../Asset/bachkhoalogo.png" alt="HCMUT logo" width="60" height="68"> </a>
+        <a href="collection.php"> <img class="navbar-brand" src="../Asset/logo.png" alt="HCMUT logo" width="60" height="68"> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
