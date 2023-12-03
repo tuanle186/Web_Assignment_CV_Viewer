@@ -1,4 +1,21 @@
-CREATE DATABASE cv_information;
+<?php
+$servername = "localhost:3306";
+$username = "root";
+$password = "";
+
+$conn = mysqli_connect($servername, $username, $password);
+if (!$conn) {
+    die("Kết nối không thành công: " . mysqli_connect_error());
+}
+
+// CREATE DATABASE,TABLES and INSERT DATA
+// Password hashing
+$password_1 = "truetruetrue"; // VINH DAO QUANG
+$hashed_password_1 = password_hash($password_1, PASSWORD_DEFAULT);
+$password_2 = "sadness"; // JOHN SMITH
+$hashed_password_2 = password_hash($password_2, PASSWORD_DEFAULT);
+
+$sql = "CREATE DATABASE cv_information;
 
 USE cv_information;
 
@@ -83,17 +100,14 @@ ALTER TABLE skills
 ALTER TABLE experiences
     ADD FOREIGN KEY (resume_id) REFERENCES resumes(id);
 
-
-
--- INSERT USER 
 INSERT INTO users (name, gender, address, email, phone, password, dob, position, introduction) VALUES 
-('VINH DAO QUANG', 'Male', 'HCMC', 'vinhdao@gmail.com', '0909002123', 'truetruetrue', '2002-06-10', 'Front-end Developer',
+('VINH DAO QUANG', 'Male', 'HCMC', 'vinhdao@gmail.com', '0909002123', '$hashed_password_1', '2002-06-10', 'Front-end Developer',
 'I am junior in Computer Science at Ho Chi Minh University of Technology. As a self-awareness and self-discipline person, I am able to handle my jobs at a considerate level. 
 To be honest, I am really dedicated to improve myself and I am keen on coding, especially with Javascript. I like to work with team because I am willing to listen every comments which is highly contributed to projects as well as myself. In addition, I am able to conduct research and learn new knowledge in a short period (usually in about two weeks) as well as learning from persons who are likely to make me closer to perfection.
 To tell about my further wishes, working as a software developer in about 5 - 8 years will be enough for me before deciding to face new challenges in coding and creating applications in both mobile and web field.');
 
 INSERT INTO users (name, gender, address, email, phone, password, dob, position, introduction) VALUES 
-('JOHN SMITH', 'Male', 'London', 'johnsmith@gmail.com', '091999323', 'sadness', '1988-02-03', 'Fullstack Developer',
+('JOHN SMITH', 'Male', 'London', 'johnsmith@gmail.com', '091999323', '$hashed_password_2', '1988-02-03', 'Fullstack Developer',
 'I am junior in Computer Science at Standford University. As a self-awareness and self-discipline person, I am able to handle my jobs at a considerate level. 
 To be honest, I am really dedicated to improve myself and I am keen on coding, especially with Javascript. I like to work with team because I am willing to listen every comments which is highly contributed to projects as well as myself. In addition, I am able to conduct research and learn new knowledge in a short period (usually in about two weeks) as well as learning from persons who are likely to make me closer to perfection.
 To tell about my further wishes, working as a software developer in about 5 - 8 years will be enough for me before deciding to face new challenges in coding and creating applications in both mobile and web field.');
@@ -153,8 +167,11 @@ INSERT INTO experiences (duration, position, company, resume_id) VALUES
 ('36', 'Senior Back-end Developer', 'Google', 2);
 
 INSERT INTO experiences (duration, position, company, resume_id) VALUES 
-('24', 'Senior Fullstack Developer', 'Youtube', 2);
+('24', 'Senior Fullstack Developer', 'Youtube', 2);";
 
-
-
-
+if ($conn->multi_query($sql) === TRUE) {
+    echo "Multi query executed successfully";
+} else {
+    echo "Error executing multi query: " . $conn->error;
+}
+?>

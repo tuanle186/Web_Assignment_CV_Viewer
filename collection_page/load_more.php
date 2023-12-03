@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../config/db.php';
 
 if (isset($_POST['searchTerm']) && isset($_POST['limit']) && isset($_POST['offset'])) {
@@ -6,7 +7,7 @@ if (isset($_POST['searchTerm']) && isset($_POST['limit']) && isset($_POST['offse
     $limit = $_POST['limit'];
     $offset = $_POST['offset'];
 
-    $query = "SELECT * FROM resumes WHERE title LIKE '%$searchTerm%' LIMIT $offset, $limit";
+    $query = "SELECT * FROM resumes WHERE user_id={$_SESSION['user_id']} AND title LIKE '%$searchTerm%' LIMIT $offset, $limit";
     $resumes = mysqli_query($conn, $query);
 
     while ($row = mysqli_fetch_assoc($resumes)) :

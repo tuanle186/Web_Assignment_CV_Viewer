@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (isset($_SESSION["is_signed_in"]) && $_SESSION["is_signed_in"] === TRUE) {
+    header('Location: ../collection_page/collection.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,11 +38,6 @@ session_start();
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
-                        <!-- <div class="form-check mb-4">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                            </label>
-                        </div> -->
                         <div id="login_failed" class="containter mb-4">
                             <?php
                             if (isset($_GET['wrong_pwd'])) {
@@ -54,8 +53,8 @@ session_start();
                 </div>
                 <div class="col-md-3"></div>
             </div>
-            <div id="new_here"class="col-sm-3 h-100 vertical-center hero-image">
-                <div class="col-sm text-center">
+            <div id="new_here"class="col-md-3 h-100 vertical-center hero-image">
+                <div class="col-md text-center">
                     <h2 class="pb-4">New Here?</h2>
                     <p class="pb-4">Sign up and <br> create your own CV <br> with ease!</p>
                     <button id="signup_button" type="button" class="btn w-50 rounded-5">Sign Up</button>

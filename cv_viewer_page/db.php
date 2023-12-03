@@ -14,25 +14,25 @@
     }
 
     //update password hashed
-    $sql = "SELECT id, password FROM users";
-    $result = $conn->query($sql);
+    // $sql = "SELECT id, password FROM users";
+    // $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $userId = $row['id'];
-            $plainPassword = $row['password'];
+    // if ($result->num_rows > 0) {
+    //     while ($row = $result->fetch_assoc()) {
+    //         $userId = $row['id'];
+    //         $plainPassword = $row['password'];
 
-            // Hash the password
-            $hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
+    //         // Hash the password
+    //         $hashedPassword = password_hash($plainPassword, PASSWORD_DEFAULT);
 
-            // Update the database with the hashed password
-            $updateSql = "UPDATE users SET password = '$hashedPassword' WHERE id = $userId";
-            $conn->query($updateSql);
-        }
-        // echo "Passwords hashed and updated successfully.";
-    } else {
-        echo "No users found.";
-    }
+    //         // Update the database with the hashed password
+    //         $updateSql = "UPDATE users SET password = '$hashedPassword' WHERE id = $userId";
+    //         $conn->query($updateSql);
+    //     }
+    //     // echo "Passwords hashed and updated successfully.";
+    // } else {
+    //     echo "No users found.";
+    // }
 
 
     //retrieve data
