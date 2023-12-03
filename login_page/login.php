@@ -13,8 +13,9 @@ if (isset($_SESSION["is_signed_in"]) && $_SESSION["is_signed_in"] === TRUE) {
     <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="../asset/logo.png"/>
 </head>
 <body>
@@ -23,12 +24,12 @@ if (isset($_SESSION["is_signed_in"]) && $_SESSION["is_signed_in"] === TRUE) {
             <div class="col-md-9 h-100 vertical-center">
                 <div class="col-md-3 mb-auto mt-2">
                     <a href="http://localhost/login_page/login.php">
-                        <img id="logo" src="../Asset/ok.png" alt="Logo" class="img-fluid">
+                        <img id="logo" src="../Asset/logo.png" alt="Logo" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-md-6">
                     <h2 id="login_title" class="text-center pb-4">Login to your account</h2>
-                    <form id="login_form" action="login_processing.php" method="post" class="px-5 was-validated text-center" onsubmit="return validateLoginForm()">
+                    <form id="login_form" action="login_processing.php" method="post" class="px-5 text-center <?php if(isset($_GET['wrong_pwd']) || isset($_GET['user_not_found']))  echo'was-validated'?>"" novalidate>
                         <div class="mb-4 mt-3 mx-auto w-75">
                             <input id="email" type="email" class="form-control" id="email" placeholder="Email" name="email" required value="<?php echo isset($_SESSION["email"]) ? $_SESSION["email"] : "" ?>">
                             <div class="valid-feedback">Valid.</div>
