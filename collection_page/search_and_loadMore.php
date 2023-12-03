@@ -13,9 +13,8 @@ if (isset($_POST['searchTerm']) && isset($_POST['limit']) && isset($_POST['offse
     while ($row = mysqli_fetch_assoc($resumes)) :
         ?>
         <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['update_at']; ?></td>
+            <td> <a href="http://localhost/cv_viewer_page/cv_viewer.php?cv_id=<?php echo $row['id']; ?>"> <?php echo $row['title']; ?> </td>
+            <td> <?php echo $row['update_at']; ?> </td>
         </tr>
     <?php
     endwhile;

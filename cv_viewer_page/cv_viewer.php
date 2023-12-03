@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="icon" type="image/png" href="../asset/logo.png"/>
 </head>
 <body>
     <div class="container">
@@ -55,7 +55,6 @@
             </ul>
         </div>
 
-
         <div class="info">
             <ul>
                 <li>
@@ -83,8 +82,6 @@
             <h2>EXPERIENCES</h2>
             <?php 
                 $experiences = getExperiences($resume_id, $conn);
-                // echo "Resume ID for User ID: $resume_id";
-
                 foreach ($experiences as $exp) {
                     echo '<div class="item">';
                     echo '<h4>' . (isset($exp['position']) ? $exp['position'] : 'Position') . '</h4>';
@@ -114,9 +111,7 @@
             <h2>PROJECTS</h2>
 
             <?php 
-
                 $projects = getProjects($resume_id, $conn);
-
                 foreach($projects as $project) {
                     echo '<div class="item">';
                         echo '<h4>'. (isset($project['name']) ? $project['name'] : 'Project Name') .'</h4>';
@@ -137,21 +132,15 @@
                         echo '</div>';
                     echo '</div>';
                 }
-
             ?>
         </div>
     </div>
-
     <button id="generate-pdf" onclick="getPDF()">Print CV</button>
-
     <script>
         var btn = document.querySelector("button");
         btn.onclick = () => {
-                window.print();
+            window.print();
         }
     </script>
-    
-    
-    
 </body>
 </html>
