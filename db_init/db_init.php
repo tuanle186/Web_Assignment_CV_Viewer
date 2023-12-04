@@ -176,12 +176,60 @@ INSERT INTO avatar (image_path, resume_id) VALUES
 INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
 ('Application for web developers 3', '2023-12-01', '2023-12-02 18:31', 1);
 
+    -- Insert projects
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Facebook - Social Media Platform', '3', 'www.facebook.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is a description for cv 3', 3);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Youtube - Video Sharing Platform', '3', 'www.youtube.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 3', 3);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Instagram - Social Media Platform', '3', 'www.instagram.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 3', 3);
+
+    -- Insert skills
+INSERT INTO skills (name, resume_id) VALUES ('Javascript', 3);
+INSERT INTO skills (name, resume_id) VALUES ('C++', 3);
+INSERT INTO skills (name, resume_id) VALUES ('PHP', 3);
+INSERT INTO skills (name, resume_id) VALUES ('Python', 3);
+
+    -- Insert education
+INSERT INTO education (uni_name, degree, major, grad_year, resume_id) VALUES 
+(' Hochiminh University of Technology', 'Bachelor', 'Computer Science', '2020', 3);
+
+    -- Insert experiences
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('24', 'Senior Front-end Developer', 'Bee Solution Ltd.', 3);
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('12', 'Senior Front-end Developer', 'VNG', 3);
+
 INSERT INTO avatar (image_path, resume_id) VALUES
 ('../db_init/ava2.jpg', 3);
 
 -- INSERT RESUMES 4 - BEGIN ------------------------------------------------------------------------
 INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
 ('Application for web developers 4', '2023-12-01', '2023-12-02 18:31', 1);
+
+    -- Insert projects
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Facebook - Social Media Platform', '3', 'www.facebook.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is a description for cv 4', 4);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Youtube - Video Sharing Platform', '3', 'www.youtube.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 4', 4);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Instagram - Social Media Platform', '3', 'www.instagram.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 4', 4);
+
+    -- Insert skills
+INSERT INTO skills (name, resume_id) VALUES ('Javascript', 4);
+INSERT INTO skills (name, resume_id) VALUES ('C++', 4);
+INSERT INTO skills (name, resume_id) VALUES ('PHP', 4);
+INSERT INTO skills (name, resume_id) VALUES ('Python', 4);
+
+    -- Insert education
+INSERT INTO education (uni_name, degree, major, grad_year, resume_id) VALUES 
+(' Hochiminh University of Technology', 'Bachelor', 'Computer Science', '2020', 4);
+
+    -- Insert experiences
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('24', 'Senior Front-end Developer', 'Bee Solution Ltd.', 4);
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('12', 'Senior Front-end Developer', 'VNG', 4);
 
 INSERT INTO avatar (image_path, resume_id) VALUES
 ('../db_init/ava3.jpg', 4);
@@ -190,12 +238,60 @@ INSERT INTO avatar (image_path, resume_id) VALUES
 INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
 ('Application for web developers 5', '2023-12-01', '2023-12-02 18:31', 1);
 
+    -- Insert projects
+    INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Facebook - Social Media Platform', '3', 'www.facebook.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is a description for cv 5', 5);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Youtube - Video Sharing Platform', '3', 'www.youtube.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 5', 5);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Instagram - Social Media Platform', '3', 'www.instagram.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 5', 5);
+
+    -- Insert skills
+INSERT INTO skills (name, resume_id) VALUES ('Javascript', 5);
+INSERT INTO skills (name, resume_id) VALUES ('C++', 5);
+INSERT INTO skills (name, resume_id) VALUES ('PHP', 5);
+INSERT INTO skills (name, resume_id) VALUES ('Python', 5);
+
+    -- Insert education
+INSERT INTO education (uni_name, degree, major, grad_year, resume_id) VALUES 
+(' Hochiminh University of Technology', 'Bachelor', 'Computer Science', '2020', 5);
+
+    -- Insert experiences
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('24', 'Senior Front-end Developer', 'Bee Solution Ltd.', 5);
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('12', 'Senior Front-end Developer', 'VNG', 5);
+
 INSERT INTO avatar (image_path, resume_id) VALUES
 ('../db_init/ava4.jpg', 5);
 
 -- INSERT RESUMES 6 - BEGIN ------------------------------------------------------------------------
 INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
 ('Application for web developers 6', '2023-12-01', '2023-12-02 18:31', 1);
+
+    -- Insert projects
+    INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Facebook - Social Media Platform', '3', 'www.facebook.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is a description for cv 6', 6);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Youtube - Video Sharing Platform', '3', 'www.youtube.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 6', 6);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Instagram - Social Media Platform', '3', 'www.instagram.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 6', 6);
+
+    -- Insert skills
+INSERT INTO skills (name, resume_id) VALUES ('Javascript', 6);
+INSERT INTO skills (name, resume_id) VALUES ('C++', 6);
+INSERT INTO skills (name, resume_id) VALUES ('PHP', 6);
+INSERT INTO skills (name, resume_id) VALUES ('Python', 6);
+
+    -- Insert education
+INSERT INTO education (uni_name, degree, major, grad_year, resume_id) VALUES 
+(' Hochiminh University of Technology', 'Bachelor', 'Computer Science', '2020', 6);
+
+    -- Insert experiences
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('24', 'Senior Front-end Developer', 'Bee Solution Ltd.', 6);
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('12', 'Senior Front-end Developer', 'VNG', 6);
 
 INSERT INTO avatar (image_path, resume_id) VALUES
 ('../db_init/ava4.jpg', 6);
@@ -204,36 +300,32 @@ INSERT INTO avatar (image_path, resume_id) VALUES
 INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
 ('Application for web developers 7', '2023-12-01', '2023-12-02 18:31', 1);
 
+    -- Insert projects
+    INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Facebook - Social Media Platform', '3', 'www.facebook.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is a description for cv 7', 7);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Youtube - Video Sharing Platform', '3', 'www.youtube.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 7', 7);
+INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
+('Instagram - Social Media Platform', '3', 'www.instagram.com', 'HTML, CSS, Javascript, PHP', 'Front-end, Back-end', 'This is another description for cv 7', 7);
+
+    -- Insert skills
+INSERT INTO skills (name, resume_id) VALUES ('Javascript', 7);
+INSERT INTO skills (name, resume_id) VALUES ('C++', 7);
+INSERT INTO skills (name, resume_id) VALUES ('PHP', 7);
+INSERT INTO skills (name, resume_id) VALUES ('Python', 7);
+
+    -- Insert education
+INSERT INTO education (uni_name, degree, major, grad_year, resume_id) VALUES 
+(' Hochiminh University of Technology', 'Bachelor', 'Computer Science', '2020', 7);
+
+    -- Insert experiences
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('24', 'Senior Front-end Developer', 'Bee Solution Ltd.', 7);
+INSERT INTO experiences (duration, position, company, resume_id) VALUES 
+('12', 'Senior Front-end Developer', 'VNG', 7);
+
 INSERT INTO avatar (image_path, resume_id) VALUES
 ('../db_init/ava4.jpg', 7);
-
--- INSERT RESUMES 8 - BEGIN ------------------------------------------------------------------------
-INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
-('Application for web developers 8', '2023-12-01', '2023-12-02 18:31', 1);
-
-INSERT INTO avatar (image_path, resume_id) VALUES
-('../db_init/ava4.jpg', 8);
-
--- INSERT RESUMES 9 - BEGIN ------------------------------------------------------------------------
-INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
-('Application for web developers 9', '2023-12-01', '2023-12-02 18:31', 1);
-
-INSERT INTO avatar (image_path, resume_id) VALUES
-('../db_init/ava4.jpg', 9);
-
--- INSERT RESUMES 10 - BEGIN ------------------------------------------------------------------------
-INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
-('Application for web developers 10', '2023-12-01', '2023-12-02 18:31', 1);
-
-INSERT INTO avatar (image_path, resume_id) VALUES
-('../db_init/ava4.jpg', 10);
-
--- INSERT RESUMES 11 - BEGIN ------------------------------------------------------------------------
-INSERT INTO resumes (title, created_at, update_at, user_id) VALUES 
-('Application for web developers 11', '2023-12-01', '2023-12-02 18:31', 1);
-
-INSERT INTO avatar (image_path, resume_id) VALUES
-('../db_init/ava4.jpg', 11);
 
 
 
@@ -250,30 +342,30 @@ INSERT INTO resumes (title, created_at, update_at, user_id) VALUES
 
     -- Insert projects
 INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
-('Travel No Price - Booking tickets website', '4','www.travelnoprice.com', 'ReactJs, NextJs, Bootstrap, VueJS', 'Front-end, Back-end', 'This is a description for cv 3', 12);
+('Travel No Price - Booking tickets website', '4','www.travelnoprice.com', 'ReactJs, NextJs, Bootstrap, VueJS', 'Front-end, Back-end', 'This is a description for cv 8', 8);
 INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
-('Alimac Shopping - Shirt shopping website', '3', 'www.alimac.com', 'ReactJs, NextJs, Bootstrap, VueJS', 'Front-end, Back-end', 'This is a description for cv 3', 12);
+('Alimac Shopping - Shirt shopping website', '3', 'www.alimac.com', 'ReactJs, NextJs, Bootstrap, VueJS', 'Front-end, Back-end', 'This is a description for cv 8', 8);
 INSERT INTO projects (name, duration, web, technology, field, description, resume_id) VALUES 
-('Cat Tinder - Where cats can find true love', '3', 'www.cattinder.com', 'ReactJs, NextJs, Bootstrap, VueJS', 'Front-end, Back-end', 'This is a description for cv 3', 12);
+('Cat Tinder - Where cats can find true love', '3', 'www.cattinder.com', 'ReactJs, NextJs, Bootstrap, VueJS', 'Front-end, Back-end', 'This is a description for cv 8', 8);
 
     -- Insert skills
-INSERT INTO skills (name, resume_id) VALUES ('PHP', 12);
-INSERT INTO skills (name, resume_id) VALUES ('JavaScript', 12);
-INSERT INTO skills (name, resume_id) VALUES ('C#', 12);
-INSERT INTO skills (name, resume_id) VALUES ('Ruby', 12);
+INSERT INTO skills (name, resume_id) VALUES ('PHP', 8);
+INSERT INTO skills (name, resume_id) VALUES ('JavaScript', 8);
+INSERT INTO skills (name, resume_id) VALUES ('C#', 8);
+INSERT INTO skills (name, resume_id) VALUES ('Ruby', 8);
 
     -- Insert education
 INSERT INTO education (uni_name, degree, major, grad_year, resume_id) VALUES 
-('Standford University', 'Master', 'Computer Engineering', '2010', 12);
+('Standford University', 'Master', 'Computer Engineering', '2010', 8);
 
     -- Insert experiences
 INSERT INTO experiences (duration, position, company, resume_id) VALUES 
-('36', 'Senior Back-end Developer', 'Google', 12);
+('36', 'Senior Back-end Developer', 'Google', 8);
 INSERT INTO experiences (duration, position, company, resume_id) VALUES 
-('24', 'Senior Fullstack Developer', 'Youtube', 12);
+('24', 'Senior Fullstack Developer', 'Youtube', 8);
 
 INSERT INTO avatar (image_path, resume_id) VALUES
-('../db_init/ava2.jpg', 12)";;
+('../db_init/ava2.jpg', 8);";
 
 
 if ($conn->multi_query($sql) === TRUE) {
