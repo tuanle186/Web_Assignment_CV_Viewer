@@ -1,11 +1,16 @@
 body {
-  height: 2000px; 
-  background-image: url('../Asset/44.jpg');
+  height: 100%; 
+  background-image: url('../Asset/hero.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
 table {
-  opacity: 0.75;
+  opacity: 0.9;
+}
+
+.title {
+  color: black;
+  font-weight: 700px;
 }

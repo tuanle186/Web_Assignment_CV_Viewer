@@ -1,31 +1,21 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = ""; // no password
-$dbname = "cv_information";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../config/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_input = test_input($_POST['email']);
     $password_input = test_input($_POST['pswd']);
-    $sql = 'SELECT * FROM users WHERE email="' . $email_input . '"';
+    $sql = 'SELECT id, email, password FROM users WHERE email="' . $email_input . '"';
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $rows = $result->fetch_assoc();
         $_SESSION["email"] = $email_input;
-        if ($password_input == $rows['password']) {
-        // if (password_verify($password_input, $rows['password'])) {
+        $_SESSION["is_signed_in"] = false;
+        if (password_verify($password_input, $rows['password'])) {
             setcookie("email", $email_input, time() + (86400 * 30), "/");
+            $_SESSION["is_signed_in"] = true;
+            $_SESSION["user_id"] = $rows['id'];
             header("Location: ../collection_page/collection.php");
-
         } else {
             header("Location: http://localhost/login_page/login.php?wrong_pwd=1");
         }
